@@ -18,5 +18,5 @@ app.post("/user", async (req, res) => {
 });
 console.log(process.env.NODE_ENV);
 
-const port = 9000 || process.env.port;
+const port = 9000 || process.env.PORT;
 app.listen(port, () => console.log("Listening to port 9000"));
