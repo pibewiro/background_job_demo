@@ -15,4 +15,7 @@ submitButton.addEventListener("click", async function () {
 
   const response = await axios.post(`${api_url2}/user`, { ...user });
   console.log(response.data);
+  name.value = null;
+  email.value = null;
+  password.value = null;
 });
