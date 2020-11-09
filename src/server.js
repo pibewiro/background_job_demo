@@ -23,4 +23,4 @@ const port = process.env.PORT || 9000;
 
 app.use("/", express.static(path.join(__dirname, "..", "dist")));
 
-app.listen(port, () => console.log("Listening to port 9000"));
+app.listen(port, () => console.log(`Listening to port ${port}`));
