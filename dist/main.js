@@ -4,7 +4,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const submitButton = document.getElementById("submitButton");
 const api_url = "http://localhost:9000";
-const api_url2 = "https://resistest.herokuapp.com/";
+const api_url2 = "https://resistest.herokuapp.com";
 
 submitButton.addEventListener("click", async function () {
   const user = {
@@ -13,6 +13,6 @@ submitButton.addEventListener("click", async function () {
     password: password.value,
   };
 
-  const response = await axios.post(`${api_url}/user`, { ...user });
+  const response = await axios.post(`${api_url2}/user`, { ...user });
   console.log(response.data);
 });
