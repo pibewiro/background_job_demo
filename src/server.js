@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const RegistrationQueue = require("./lib/RegistrationQueue");
 
 const app = express();
@@ -19,4 +20,7 @@ app.post("/user", async (req, res) => {
 console.log(process.env.NODE_ENV);
 
 const port = process.env.PORT || 9000;
+
+app.use("/", express.static(path.join(__dirname, "..", "dist")));
+
 app.listen(port, () => console.log("Listening to port 9000"));
