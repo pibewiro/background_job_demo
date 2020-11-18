@@ -17,7 +17,7 @@ class RegistrationMailQueue {
   }
 
   add(data) {
-    return this.queue.bull.add(data);
+    this.queue.bull.add(data);
   }
 
   processQueue() {
